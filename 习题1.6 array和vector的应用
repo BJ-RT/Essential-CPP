@@ -19,3 +19,22 @@ int main()
 }
 
 使用array:
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    const int array_size = 128;
+    int ia[array_size];
+    int ival,icnt = 0;
+    while (cin >> ival && icnt < array_size)
+        ia[icnt++] = ival;
+    int sum, ix;
+    for (sum = 0, ix = 0; ix < icnt; ++ix)
+        sum+=ia[ix];
+    int average = sum/icnt;
+    cout << "sum of " << icnt
+         << " elements: " << sum
+         << ". average: " << average << endl;
+    return 0;
+}
