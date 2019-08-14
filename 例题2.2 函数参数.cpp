@@ -3,7 +3,9 @@
 
 using namespace std;
 
-void display(vector<int> vec)  //需要改变的参数才加&.(缓冲区)
+void display(vector<int> &vec)  //此处的&可有可无, 加上&会提高效率(不用复制,只需传地址)
+                                //需要改变的参数才加&.(缓冲区)
+    
 {
     for (int ix = 0; ix < vec.size(); ++ix)
         cout <<vec[ix] << " ";
